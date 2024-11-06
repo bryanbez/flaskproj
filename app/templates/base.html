@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App</title>
+    <!-- Include Tailwind CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header>
+        <header>
+            <h1>My Simple Flask Application</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('route_bp.home') }}">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; {{ year }} My Simple Flask Application. All rights reserved.</p>
+    </footer>
+</body>
+</html>
